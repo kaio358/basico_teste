@@ -1,0 +1,50 @@
+/* form/ barra de busca  */
+.caixaInputBarra{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url("../img/pessoas_fechando_acordo_2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; */
+    background-image: linear-gradient(to left,#42275a, #734b6d);
+    height: 100vh;
+    
+}
+
+
+.inputBarra{
+    /* border: none; */
+    border-radius: 50px 0 0 50px;
+    height: 42px;
+    /* box-shadow: var(--box-shadow); */
+    text-align: center;
+    font-size: 20px;
+}
+.iconInput{
+ 
+    /* box-shadow: var(--box-shadow); */
+    border-radius: 0 50px 50px 0;
+    border: none;
+    background-color: #F24957;
+    width: 50px;
+    height: 41px;
+}
+.iconInput img{
+    width: 30px;
+}
+
+
+
+ /* area amostra */
+
+ .mostruario {
+  
+  
+    text-align: center;
+}
+.titulo{
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}

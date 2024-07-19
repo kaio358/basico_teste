@@ -1,0 +1,25 @@
+/* menu  */
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: red;
+}
+
+.menu {
+    position: fixed;
+    right: 0px;
+    display: flex;
+    background-color: white;
+  
+    border-radius: 0px 0px 0px 5px;
+    font-size: larger;
+    box-shadow: 0 4px 5px 0 rgba(12, 20, 50, 0.37);
+    padding: 8px;
+}
+.menu div{
+    margin-left: 5px ;
+    margin-right:5px ;
+  
+}
