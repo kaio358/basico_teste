@@ -1,0 +1,55 @@
+/* rodape  */
+
+.footer {
+    margin-top: 30px;
+    background-image: linear-gradient(to left, #734b6d, #42275a);
+    color: white;
+    padding: 20px 0;
+  }
+  
+  .footerContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  
+  .footerSection {
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+  }
+  
+  .footerSection h4 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #F24957;
+  }
+  
+  .footerSection p {
+    margin: 5px 0;
+    color: #cccccc;
+  }
+  
+  .socialIcons img {
+    width: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+  }
+  
+  .socialIcons img:hover {
+    transform: scale(1.1);
+  }
+  
+  .footerBottom {
+    text-align: center;
+    border-top: 1px solid #F24957;
+    padding-top: 10px;
+    margin-top: 20px;
+  }
+  
+  .footerBottom p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #cccccc;
+  }

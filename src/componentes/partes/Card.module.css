@@ -1,0 +1,47 @@
+.card{
+   
+    flex-basis: 33.3%;
+    display: grid;
+    align-items: center;
+    grid-template-rows: 1fr 1fr;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0 8px 10px 0 rgba( 31, 38, 135, 0.37 );
+    border: 1px solid black;
+    border-radius: 8px;
+    max-width: 300px;
+  
+    text-align: center;
+}
+
+.card h2{
+ 
+    color: #0E65B0;
+    margin: 5px 0px 5px 0px ;
+}
+
+
+.card img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+.icon_comprar{
+  
+    margin: 20px 0 20px 0;
+    
+    font-size: 18px;
+
+    cursor: pointer;
+    background: #F24957;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 5px;
+    width: 70%;
+    transition: background-color 0.3s;
+   
+}
+.icon_comprar:hover {
+    background-color: #0E65B0;
+}

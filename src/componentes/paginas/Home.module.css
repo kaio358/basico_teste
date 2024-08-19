@@ -48,3 +48,17 @@
     margin-bottom: 20px;
     color: #333;
 }
+
+/* cards  */
+.cardContainer{
+ 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+
+}
+
+
+
+  
