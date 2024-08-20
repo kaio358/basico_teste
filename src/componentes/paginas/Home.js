@@ -6,6 +6,7 @@ import lupa from "../../img/lupa.png"
 
 import Card from "../partes/Card";
 import Rodape from "../partes/Rodape"
+import { Link } from "react-router-dom";
 
 
 function Home(){
@@ -21,10 +22,12 @@ function Home(){
             <div className={styles.mostruario}>
                 <h1 className={styles.titulo}>Catálogo</h1>
                 <div className={styles.cardContainer} >
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
+                    <Link to="/produto"> <Card/></Link>
+                    <Link to="/produto"> <Card/></Link>
+                    <Link to="/produto"> <Card/></Link>
+                    <Link to="/produto"> <Card/></Link>
+                    
+                   
 
                 </div>
             </div>
