@@ -1,0 +1,51 @@
+.comentarios {
+    background-color: white;
+    width: 95%;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.comentarios h2 {
+    margin-top: 0;
+}
+
+.mais_detalhes p {
+    font-size: medium;
+}
+
+.meu_comentario {
+    text-align: center;
+}
+
+.estrela_contorno {
+    cursor: pointer;
+}
+
+.comentario .texto_pessoal {
+    width: 100%;
+    height: 100px;
+    font-size: larger;
+    font-family: "Roboto", "Arial", sans-serif;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.comentar {
+    height: 40px;
+    width: 200px;
+    font-size: larger;
+    font-family: "Roboto", "Noto", sans-serif;
+    background-color: #f04e4e;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.comentar:hover {
+    background-color: #c43d3d;
+}

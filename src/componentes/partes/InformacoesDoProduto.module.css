@@ -56,12 +56,12 @@
 
 .preco_pagamento {
     background: #fafafa;
-    width: 80%;
+    width: 60%;
     padding: 10px;
     margin-bottom: 20px;
     text-align: center;
     color: #993399;
-    font-size: 3vw;
+    font-size: 2vw;
     font-family: Calibri;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -85,7 +85,7 @@
 
 /* input de quantidade  */
 .quantidade_comprar {
-    width: 50px;
+    width: 100px;
     height: 40px;
     text-align: center;
     font-size: large;
