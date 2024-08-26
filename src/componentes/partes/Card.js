@@ -3,7 +3,7 @@ function Card(){
     return(
         <section className={styles.card}>
             <div>
-                <img src="https://placeholder.com/400" alt="" srcset=""/>
+                <img src="https://placeholder.com/400" alt="" />
             </div>
             <div>
                 <h2>Teste</h2>

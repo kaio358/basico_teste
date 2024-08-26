@@ -5,7 +5,7 @@ import lupa from "../../img/lupa.png"
 
 
 import Card from "../partes/Card";
-import Rodape from "../partes/Rodape"
+import Rodape from "../layout/Rodape"
 import { Link } from "react-router-dom";
 
 

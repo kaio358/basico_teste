@@ -6,8 +6,13 @@ function Menu(){
         <nav className={styles.menu}>
             <div >
                 <Link to="/">Home</Link>
+              
             
-            </div>  
+            </div> 
+          
+            <div>
+                <Link to="/filtro">Mais</Link>
+            </div>
         </nav>
     )
 }

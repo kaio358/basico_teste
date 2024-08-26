@@ -108,10 +108,10 @@ function InformacoesDoProduto(){
                            
                         </div>
                         <div className={styles.botoesParaCompra}>
-                            <button class={styles.adicionar_carrinho} type="submit">
+                            <button className={styles.adicionar_carrinho} type="submit">
                                 <FaCartPlus/> Adicionar no Carrinho
                             </button> 
-                            <button className={styles.comprar_agora} type="submit" formmethod="post">Comprar Agora</button>
+                            <button className={styles.comprar_agora} type="submit" formMethod="post">Comprar Agora</button>
                         </div>
                     </form>
                 </div>
