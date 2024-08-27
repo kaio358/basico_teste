@@ -1,0 +1,12 @@
+.caixaDeOpcoes{
+    position: fixed;
+    display: flex;
+
+    background-color: white;
+    box-shadow: 0 4px 5px 0 rgba(12, 20, 50, 0.37);
+    right: 5px;
+    top: 50px;
+    
+    border-radius: 5px ;
+    padding: 5px;
+}

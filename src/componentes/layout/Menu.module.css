@@ -23,3 +23,17 @@ a:hover{
     margin-right:5px ;
   
 }
+
+
+.categorias {
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.categorias.mostrar {
+    max-height: 200px; 
+    opacity: 1;
+}
+
