@@ -16,7 +16,10 @@
     margin-top: 0;
     font-family: 'Raleway';
 }
+.caixasDentroDoFiltro{
+    margin-top: 15px;
 
+}
 
 .sumirCaixa{
     border-bottom: 1px solid black;
@@ -27,11 +30,28 @@
 .textoClick{
     font-size: 18px;
     font-family: 'Raleway';
+    cursor: pointer;
 }
 .iconVisivel{
     border: 1px solid black;
     border-radius: 50%;
 }
+
+/* barra de busca  */
 .buscaFiltro{
     border: 1px solid  #42275a;
+    border-radius: 3px;
+    width: 15vw;
+    height: 30px;
+    margin: 5px;
+    padding: 11px;
+
+}
+
+.iconLupa{
+    position: absolute;
+    top: 62px;
+    left: 13.5vw;
+    cursor: pointer;
+
 }

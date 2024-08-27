@@ -1,0 +1,53 @@
+.rangeContainer {
+    width: 300px;
+    margin: 20px 0;
+}
+
+.inputsContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.inputNumber {
+    width: 45%;
+    padding: 5px;
+    border: 1px solid #734b6d;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.rangeWrapper {
+    position: relative;
+    height: 40px; /* Ajuste a altura conforme necessário */
+}
+
+.inputRange {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(to right, #42275a, #734b6d);
+    border-radius: 5px;
+    outline: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Impede interação, garantindo que ambos os ranges funcionem juntos */
+}
+
+.inputRange::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #42275a;
+    border-radius: 50%;
+    cursor: pointer;
+    pointer-events: all; /* Permite interação com o thumb */
+    transition: background 0.3s;
+}
+
+.inputRange::-webkit-slider-thumb:hover {
+    background: #734b6d;
+}
