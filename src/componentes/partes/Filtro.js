@@ -1,5 +1,7 @@
 import styles from "./Filtro.module.css";
-import { useState } from "react";
+
+import { useState ,useEffect} from "react";
+import { useParams } from "react-router-dom";
 
 import { TiArrowSortedDown, TiArrowSortedUp } from "react-icons/ti";
 import { FaSearch } from "react-icons/fa";
@@ -9,6 +11,8 @@ import Checkbox from "./Checkbox";
 import Range from "./Range";
 
 function Filtro(){
+
+    // verifica se é visivel ou não
     const [visivel,setVisivel] = useState(false)
     const handleCheckboxChange = () => {
         setVisivel(!visivel);
@@ -18,6 +22,13 @@ function Filtro(){
     const handleCheckboxChange2 = () =>{
         setVisivel2(!visivel2);
     };
+
+
+    // pega o parametro da url 
+        
+    const { categoria } = useParams();
+
+    
     return (
         <div className={styles.caixaDoFiltro}>
             <h3>Filtro</h3>

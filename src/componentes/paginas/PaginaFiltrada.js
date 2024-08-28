@@ -6,6 +6,8 @@ import Card from "../partes/Card";
 import Rodape from "../layout/Rodape"
 
 function PaginaFiltrada(){
+      
+
     return(
         <div className={styles.filtroCompleto}>
             <div className={styles.espaco}></div>

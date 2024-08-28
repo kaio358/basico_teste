@@ -12,6 +12,7 @@ function App() {
             <Route exact path="/" element={<Home/>}/>
             <Route exact path="/produto" element={<Produto/>}/>
             <Route exact path="/filtro" element={<PaginaFiltrada/>}/>
+            <Route exact path="/filtro/:categoria" element={<PaginaFiltrada/>}/>
         </Routes>
     </Router>
   );
