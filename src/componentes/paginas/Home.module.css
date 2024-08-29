@@ -3,10 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-image: url("../img/pessoas_fechando_acordo_2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed; */
+  
     background-image: linear-gradient(to left,#42275a, #734b6d);
     height: 100vh;
     

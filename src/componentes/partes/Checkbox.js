@@ -12,7 +12,7 @@ function Checkbox({ label }) {
   const { categoria } = useParams();
 
   useEffect(() => {
-    if (categoria) {
+    if (categoria && categoria == label) {
       const checkbox = document.getElementById(id);
       if (checkbox) {
         checkbox.checked = true;

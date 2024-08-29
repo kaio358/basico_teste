@@ -26,7 +26,7 @@ function Filtro(){
 
     // pega o parametro da url 
         
-    const { categoria } = useParams();
+    // const { categoria } = useParams();
 
     
     return (
