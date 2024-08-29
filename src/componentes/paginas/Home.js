@@ -17,20 +17,18 @@ function Home(){
     return(
         <div className={styles.wrapper}>
             <div className={styles.content}>
-                <form action=" " className={styles.caixaInputBarra}>
+                <form action="" className={styles.caixaInputBarra}>
                     <div>
                         <input type="search" name="" id=""  className={styles.inputBarra} value={resultadoDaProcura} onChange={(e)=>setResultadoDaProcura(e.target.value)}/>
                     </div>
                     
-                    <Link to={`/filtro/:${resultadoDaProcura}`}><button className={styles.iconInput}><img src={lupa} alt=""/></button> </Link> 
+                    <Link to={`/filtro?categoria=${resultadoDaProcura}`}><button className={styles.iconInput}><img src={lupa} alt=""/></button> </Link> 
                 </form>
                 <div className={styles.mostruario}>
                     <h1 className={styles.titulo}>Catálogo</h1>
                     <div className={styles.cardContainer} >
                         <Link to="/produto"> <Card nome="legal"/></Link>
-                        <Link to="/produto"> <Card/></Link>
-                        <Link to="/produto"> <Card/></Link>
-                        <Link to="/produto"> <Card/></Link>
+                  
                         {
                             dadosLista.map(nome => <Link to="/produto"><Card nome={nome}/></Link> )
                         }

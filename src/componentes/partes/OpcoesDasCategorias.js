@@ -11,18 +11,18 @@ function OpcoesDasCategorias() {
         <div className={styles.caixaDeOpcoes} >
             <div>
                 <h4>Coisas</h4>
-                <p>Teste</p>
+                <p onClick={() => irParaFiltro('teste')}>Teste</p>
                 <p onClick={() => irParaFiltro('bonito')}>Bonito</p>
             </div>
             <div>
                 <h4>Coisas 2</h4>
-                <p>Teste 2</p>
-                <p>Bonito 2</p>
+                <p onClick={() => irParaFiltro('lindo')}>Lindo</p>
+                <p onClick={() => irParaFiltro('legal')}>Legal</p>
             </div>
             <div>
                 <h4>Coisas 3</h4>
-                <p>Teste 3</p>
-                <p>Bonito 3</p>
+                <p onClick={() => irParaFiltro('interessante')}>Interessante</p>
+                {/* <p onClick={() => irParaFiltro('')}>Bonito 3</p> */}
             </div>
         </div>
     )

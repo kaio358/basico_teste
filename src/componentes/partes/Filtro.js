@@ -1,7 +1,7 @@
 import styles from "./Filtro.module.css";
 
 import { useState ,useEffect} from "react";
-import { useParams } from "react-router-dom";
+
 
 import { TiArrowSortedDown, TiArrowSortedUp } from "react-icons/ti";
 import { FaSearch } from "react-icons/fa";
@@ -9,6 +9,7 @@ import { FaSearch } from "react-icons/fa";
 
 import Checkbox from "./Checkbox";
 import Range from "./Range";
+import { Link } from "react-router-dom";
 
 function Filtro(){
 
@@ -24,10 +25,10 @@ function Filtro(){
     };
 
 
-    // pega o parametro da url 
-        
-    // const { categoria } = useParams();
 
+    const [resultadoDaProcura, setResultadoDaProcura] = useState('')
+    
+    
     
     return (
         <div className={styles.caixaDoFiltro}>
@@ -37,10 +38,11 @@ function Filtro(){
             <div className={styles.caixasDentroDoFiltro}>
                 <div >
                 
-                    <input type="search" className={styles.buscaFiltro}/>
+                    <input type="search" className={styles.buscaFiltro}  value={resultadoDaProcura} onChange={(e)=>setResultadoDaProcura(e.target.value)}/>
+                    
                     <div className={styles.iconLupa}>
+                       <Link to={`/filtro?categoria=${resultadoDaProcura}`}><FaSearch/></Link> 
                         
-                        <FaSearch/>
                     </div>
                 </div>
                 <div className={styles.sumirCaixa}>
