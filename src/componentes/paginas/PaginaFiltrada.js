@@ -7,6 +7,8 @@ import Filtro from "../partes/Filtro";
 import Card from "../partes/Card";
 import Rodape from "../layout/Rodape";
 
+import { TiChevronLeft, TiChevronRight } from "react-icons/ti";
+
 function PaginaFiltrada() {
     const [dadosLista, setDadosLista] = useState(["bonito", "legal", "teste", "interessante"]);
     const [resultadoFiltrado, setResultadoFiltrado] = useState([]);
@@ -37,13 +39,27 @@ function PaginaFiltrada() {
         }
     }, [categoria, location.search, dadosLista]);
 
+
+
+    const [filtroMenu,setFiltroMenu] = useState(false)
+
+   
+    // filtroMenu ?styles.iconesDosFiltroTrue : styles.iconesDoFiltro} onClick={()=> setFiltroMenu(!filtroMenu) }
+
     return (
         <div className={styles.filtroCompleto}>
             <div className={styles.content}>
                 <div className={styles.espaco}></div>
                 <main className={styles.filtroAmostra}>
-                    <div>
-                        <Filtro />
+                    <div className={styles.caixaLateralFiltro} >
+                        <div className={filtroMenu ? styles['slide-in'] : styles['slide-out']}>
+
+                            <Filtro />
+                        </div>
+                        <div className={`${styles.iconesDoFiltro} ${filtroMenu ? styles['slide-in-icon'] : styles['slide-out-icon']}`} onClick={()=> setFiltroMenu(!filtroMenu)}>
+                            {filtroMenu? <TiChevronLeft/>: <TiChevronRight/>}
+                            
+                        </div>
                     </div>
                     <aside className={styles.ladoDosCards}>
                         {resultadoFiltrado.length > 0 ? (

@@ -58,7 +58,17 @@
 
 
 
+
+
+
+  
 @media (min-width: 320px) and (max-width: 480px) {
+    .caixaDoFiltro{
+        position: static;
+        width: 80vw;
+        left: 5px;
+    }   
+  
 }
 @media (min-width: 481px) and (max-width: 768px) {
 }
