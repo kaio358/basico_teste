@@ -44,19 +44,19 @@ function PaginaFiltrada() {
     const [filtroMenu,setFiltroMenu] = useState(false)
 
    
-    // filtroMenu ?styles.iconesDosFiltroTrue : styles.iconesDoFiltro} onClick={()=> setFiltroMenu(!filtroMenu) }
-
+   
     return (
         <div className={styles.filtroCompleto}>
             <div className={styles.content}>
                 <div className={styles.espaco}></div>
                 <main className={styles.filtroAmostra}>
-                    <div className={styles.caixaLateralFiltro} >
-                        <div className={filtroMenu ? styles['slide-in'] : styles['slide-out']}>
+            
+                    <div className={ `${styles.caixaLateralFiltro} ${filtroMenu ? styles['slide-in'] : styles['slide-out']}`} >
+                        <div >
 
                             <Filtro />
                         </div>
-                        <div className={`${styles.iconesDoFiltro} ${filtroMenu ? styles['slide-in-icon'] : styles['slide-out-icon']}`} onClick={()=> setFiltroMenu(!filtroMenu)}>
+                        <div className={`${styles.iconesDoFiltro} `} onClick={()=> setFiltroMenu(!filtroMenu)}>
                             {filtroMenu? <TiChevronLeft/>: <TiChevronRight/>}
                             
                         </div>

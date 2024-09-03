@@ -39,54 +39,28 @@
     justify-content: center;
     gap: 20px;
 }
-
-/* parte do filtro*/
+/* animação de filtro  */
 @keyframes slideIn {
-    from {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
+  from {
+    transform: translateX(-96%);
+    /* opacity: 0; */
   }
-  
-  @keyframes slideOut {
-    from {
-      transform: translateX(0);
-      opacity: 1;
-    }
-    to {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
+  to {
+    transform: translateX(0);
+    /* opacity: 1; */
   }
-  
-  /* parte do icone para celular */
-@keyframes slideInIcon {
-    from {
-      transform: translateX(-100%);
-      /* opacity: 0; */
-    }
-    to {
-      transform: translateX(0);
-      /* opacity: 1; */
-    }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    /* opacity: 1; */
   }
-  
-  @keyframes slideOutIcon {
-    from {
-      transform: translateX(0);
-      /* opacity: 1; */
-    }
-    to {
-      transform: translateX(-100%);
-      
-      /* opacity: 0; */
-    }
+  to {
+    transform: translateX(-96%);
+    /* opacity: 0; */
   }
-  
+}
 
 @media (min-width: 320px) and (max-width: 480px) {
     .filtroAmostra{
@@ -96,31 +70,27 @@
         position: fixed;
         display: flex;
         align-items: center;
+        top: 40vh;
     }
     .iconesDoFiltro{
         display: block;
   
     }
 
-
     .slide-in {
-        animation: slideIn 0.5s forwards;
-      }
+      animation: slideIn 0.5s forwards;
+    }
+  
+    .slide-out {
+      animation: slideOut 0.5s forwards;
+    }
+
     
-      .slide-out {
-        animation: slideOut 0.5s forwards;
-      }
-    .slide-in-icon {
-        animation: slideInIcon 0.5s forwards;
-      }
-    
-      .slide-out-icon {
-        animation: slideOutIcon 0.5s forwards;
-      }
 
       /* .iconesDoFiltro.slide-out {
         left: 5px; 
       } */
+    
       
 
 }

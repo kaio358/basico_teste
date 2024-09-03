@@ -1,12 +1,12 @@
 .caixaDeOpcoes{
     position: fixed;
     display: flex;
-
+    flex-wrap: wrap;
     background-color: white;
     box-shadow: 0 4px 5px 0 rgba(12, 20, 50, 0.37);
     right: 10px;
     top: 42px;
-    
+    justify-content: center;
     border-radius: 5px ;
     padding: 5px;
 }
@@ -20,6 +20,14 @@ div > p:hover{
 
 
 @media (min-width: 320px) and (max-width: 480px) {
+    .caixaDeOpcoes{
+        position: absolute;
+        right: 100%;
+        top: 6%;
+        
+       
+        /* width: 25%; */
+    }
 
 }
 @media (min-width: 481px) and (max-width: 768px) {
