@@ -27,10 +27,10 @@ function Home(){
                 <div className={styles.mostruario}>
                     <h1 className={styles.titulo}>Catálogo</h1>
                     <div className={styles.cardContainer} >
-                        <Link to="/produto"> <Card nome="legal"/></Link>
+                        {/* <Link to="/produto"> <Card nome="legal"/></Link> */}
                   
                         {
-                            dadosLista.map(nome => <Link to="/produto"><Card nome={nome}/></Link> )
+                            dadosLista.map( (nome,index) => <Link to="/produto"><Card key={index} nome={nome} descricao={"Minha fortuna terá de ser encontrada, o tesouro está todo em um lugar só, por isso o chamei de One Piece!"}/></Link> )
                         }
                        
                 

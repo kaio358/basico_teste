@@ -52,7 +52,7 @@ function Filtro(){
                     
                 </div>
                 {visivel?(
-                    [ <Checkbox label={"bonito"}/>,  <Checkbox label={"teste"}/>]
+                    [ <Checkbox label={"bonito"}/>,  <Checkbox label={"teste"}/>, <Checkbox label={"legal"}/>]
                     ) :""}
                 
             </div>

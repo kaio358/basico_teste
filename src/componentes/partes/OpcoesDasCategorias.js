@@ -5,7 +5,7 @@ function OpcoesDasCategorias() {
     const navigate = useNavigate();
 
     const irParaFiltro = (categoria) => {
-      navigate(`/filtro/${categoria}`);
+      navigate(`/filtro?categoria=${categoria}`);
     };
     return (
         <div className={styles.caixaDeOpcoes} >

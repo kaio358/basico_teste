@@ -1,6 +1,6 @@
 import styles from "./PaginaFiltrada.module.css";
 import { useEffect, useState } from "react";
-import { useParams, useLocation } from "react-router-dom";
+import { useParams, useLocation, Link } from "react-router-dom";
 import queryString from 'query-string';
 
 import Filtro from "../partes/Filtro";
@@ -64,7 +64,8 @@ function PaginaFiltrada() {
                     <aside className={styles.ladoDosCards}>
                         {resultadoFiltrado.length > 0 ? (
                             resultadoFiltrado.map((nome, index) => (
-                                <Card key={index} nome={Array.isArray(nome) ? nome[0] : nome} />
+                                <Link to="/produto"><Card key={index} nome={Array.isArray(nome) ? nome[0] : nome} /></Link>
+                                
                             ))
                         ) : (
                             <p>Nenhum resultado encontrado.</p>
