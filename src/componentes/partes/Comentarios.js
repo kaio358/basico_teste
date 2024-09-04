@@ -12,6 +12,9 @@ import cute from "../../img/estrelas/emoji/cute.png";
 import estrelaContorno from "../../img/estrelas/estrela_unica_contorno.png";
 import estrelaPreenchida from "../../img/estrelas/estrela_unica_amarela.png";
 
+
+import ComentarioUnico from "./ComentarioUnico";
+
 function Comentarios() {
     // Usar a imagem importada como valor inicial
     const [imagensPrincipal, setImagensPrincipal] = useState(thinking);
@@ -37,6 +40,20 @@ function Comentarios() {
         setEstrelasSelecionadas(index + 1);
     };
 
+
+    const [comentario, setComentario] = useState("");
+    const [comentariosAnteriores, setComentariosAnteriores] = useState([]);
+
+    function gerarComentario() {
+        // Adiciona o novo comentário ao array de comentários
+        setComentariosAnteriores(prevComentarios => [
+            ...prevComentarios,
+            <ComentarioUnico key={prevComentarios.length} texto={comentario} />
+        ]);
+        // Limpar o campo de comentário
+        setComentario("");
+    }
+    
     return (
         <div className={styles.comentarios}>
             <h2>Comentários</h2>
@@ -57,21 +74,18 @@ function Comentarios() {
           
                 </div>
                 <form className={styles.comentario}>
-                    <textarea className={styles.texto_pessoal}></textarea>
-                    <button className={styles.comentar} type="submit">Comentar</button>
+                    <textarea
+                        className={styles.texto_pessoal}
+                        value={comentario}
+                        onChange={(e) => setComentario(e.target.value)}
+                    ></textarea>
+                    <button className={styles.comentar} type="button" onClick={gerarComentario}>
+                        Comentar
+                    </button>
                 </form>
             </div>
-            <div className={styles.pessoa_comenta}>
-                
-                <div className={styles.nome_comentario}>
-                    <img className={styles.foto_perfil_terceiro} src={require("../../img/brtt.png")} alt="perfil" />
-                    <h4>Felipe</h4>
-                   
-                </div>
-                <div className={styles.comentarioDoUsuario}>
-                    <p>Ele é brabo</p>
-                </div>
-            </div>
+            
+            {comentariosAnteriores.map(c=>c)}
         </div>
     );
 }
