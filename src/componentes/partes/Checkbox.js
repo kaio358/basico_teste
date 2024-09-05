@@ -1,59 +1,51 @@
 import React, { useId, useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import styles from "./Checkbox.module.css";
-
-
 
 function Checkbox({ label }) {
   const id = useId();
-
-  // pega o parametro da url 
-  const { categoria } = useParams();
-
-  useEffect(() => {
-
-    
-    if (categoria ) {
-      let verifica 
-      const checkbox = document.getElementById(id);
-      if(checkbox){
-        if(categoria == label){   
-            verifica= true;
-        }else{
-            verifica = false;
-        }
-        checkbox.checked = verifica
-      }
-      
-    }
-  }, [categoria]);
-
+  const location = useLocation();
   const navigate = useNavigate();
 
-  const [checkado, setCheckado] = useState();
+  const [checkado, setCheckado] = useState(false);
 
- 
-
-  useEffect(()=>{
-    if(checkado){
-      if(categoria){
-        console.log('ola');
-        
-        navigate(`/filtro?categoria=${categoria},${label}`)
-      }else{
-        navigate(`/filtro?categoria=${label}`)
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const categoria = params.get('categoria');
+    
+    if (categoria) {
+      const categorias = categoria.split(',');
+      const checkbox = document.getElementById(id);
+      if (checkbox) {
+        checkbox.checked = categorias.includes(label);
       }
-      
     }
-  },[checkado])
+  }, [location.search, id, label]);
 
- 
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    let categorias = params.get('categoria') ? params.get('categoria').split(',') : [];
+
+    if (checkado) {
+      if (!categorias.includes(label)) {
+        categorias.push(label);
+      }
+    } else {
+      categorias = categorias.filter(cat => cat !== label);
+    }
+
+    params.set('categoria', categorias.join(','));
+    navigate(`/filtro?${params.toString()}`);
+  }, [checkado, label, location.search, navigate]);
+
   return (
     <div className={styles.caixaCheck}>
-        <label htmlFor={id} className={styles.fontesCheck}>{label}</label>
-        <input type="checkbox" id={id} onChange={(e)=> setCheckado(e.target.checked)} />
-        {/* <input type="checkbox" id={id}  /> */}
-     
+      <label htmlFor={id} className={styles.fontesCheck}>{label}</label>
+      <input
+        type="checkbox"
+        id={id}
+        onChange={(e) => setCheckado(e.target.checked)}
+      />
     </div>
   );
 }
