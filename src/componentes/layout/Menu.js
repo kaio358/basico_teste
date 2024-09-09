@@ -34,6 +34,9 @@ function Menu(){
                     </div>
                     
                 </div>
+                <div>
+                    <Link to="/sobre">Sobre</Link>
+                </div>
             </div >
         </nav>
     )

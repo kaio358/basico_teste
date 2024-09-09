@@ -23,6 +23,10 @@ function Filtro(){
     const handleCheckboxChange2 = () =>{
         setVisivel2(!visivel2);
     };
+    const [visivel3,setVisivel3] = useState(false)
+    const handleCheckboxChange3 = () =>{
+        setVisivel3(!visivel3);
+    };
 
 
 
@@ -52,11 +56,22 @@ function Filtro(){
                     
                 </div>
                 {visivel?(
-                    [ <Checkbox label={"bonito"}/>,  <Checkbox label={"teste"}/>, <Checkbox label={"legal"}/>]
+                    [ <Checkbox label={"bonito"} key={"teste_1"}/>,  <Checkbox label={"teste"} key={"teste_2"}/>, <Checkbox label={"legal"} key={"teste_3"}/>]
                     ) :""}
                 
             </div>
 
+            <div className={styles.caixasDentroDoFiltro}>
+                <div className={styles.sumirCaixa}>
+                        <label className={styles.textoClick} onClick={handleCheckboxChange3} > Tipo </label>
+                        { !visivel3?  <TiArrowSortedUp onClick={handleCheckboxChange3} className={styles.iconVisivel}/> :<TiArrowSortedDown onClick={handleCheckboxChange3} className={styles.iconVisivel}/>  }
+                        
+                        
+                </div>
+                {visivel3 ? [<Checkbox label={"lindo"} key={'teste_4'}/>] : ""}
+
+            </div>
+            
             <div className={styles.caixasDentroDoFiltro}>
                 <div className={styles.sumirCaixa}>
                         <label className={styles.textoClick} onClick={handleCheckboxChange2} > Preço </label>
@@ -64,7 +79,7 @@ function Filtro(){
                         
                         
                 </div>
-                {visivel2 ? <Range/> : ""}
+                {visivel2 ? <Range /> : ""}
 
             </div>
             

@@ -1,0 +1,9 @@
+.principalSobre{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  
+    background-image: linear-gradient(to left,#42275a, #734b6d);
+    height: 100vh;
+    color: white;
+}
