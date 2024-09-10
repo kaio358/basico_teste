@@ -1,9 +1,63 @@
-.principalSobre{
-    display: grid;
-    justify-content: center;
-    align-items: center;
-  
-    background-image: linear-gradient(to left,#42275a, #734b6d);
+.principalSobre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
     height: 100vh;
+    background-image: linear-gradient(to left, #42275a, #734b6d);
     color: white;
+    padding: 0 20px;
+}
+
+.textoContainer {
+    flex: 1; 
+    /* margin-right: 20px;  */
+    max-width: 50%; 
+
+    flex-direction: column;
+    /* justify-content: center; */
+    text-align: center;
+}
+
+.tituloSobre h1 {
+    margin: 0;
+    padding-bottom: 5px; 
+}
+
+.imagemSobre {
+    flex: 1; 
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.imagemSobre img {
+    max-width: 100%;
+    height: auto; 
+    object-fit: contain; 
+}
+
+/* cards  */
+
+.cardsSobre{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    gap: 5px;
+    background-color: #f4f4f4;
+}
+.cardSobre{
+    max-width: 350px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+  
+}
+.cardSobre h2{
+    font-family: Playfair Display;
+}
+.tituloCardPrincipal{
+    font-size: 50px;
+}
+.cardSobre p{
+    font-family: Lora ;
 }

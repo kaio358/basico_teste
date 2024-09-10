@@ -11,10 +11,10 @@
     padding: 5px;
 }
 
-div > p{
+.opcoesDeLink{
     cursor: pointer;
 }
-div > p:hover{
+.opcoesDeLink:hover{
     color: red;
 }
 
